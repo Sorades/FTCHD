@@ -1,0 +1,52 @@
+{
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/.hg/store/**": true,
+        "__pycache__": true,
+        "**/log/**": true,
+        "**/data/**": true,
+        ".pixi": true,
+        ".ruff_cache": true,
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/__pycache__": true,
+        ".pixi": true,
+        ".ruff_cache": true,
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+    },
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.inlayHints.variableTypes": false,
+    "python.analysis.enablePytestSupport": true,
+    "python.analysis.inlayHints.callArgumentNames": "partial",
+    "python.languageServer": "Default",
+    "python.terminal.activateEnvironment": false,
+    "python.analysis.exclude": [
+        "**/.pixi",
+        "**/config",
+        "**/data",
+        "**/log"
+    ],
+    "python.analysis.include": [
+        "**/src",
+        "**/test",
+        "**/scripts",
+    ],
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "python.analysis.typeCheckingMode": "basic"
+}

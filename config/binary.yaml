@@ -1,0 +1,24 @@
+job_type: binary
+
+optimizer:
+  lr: 5e-5
+
+scheduler:
+  eta_min: 5e-6
+
+data:
+  setting: binary
+  annotation_file: data/binary_label.csv
+
+model:
+  _target_: ftchd.model.BinaryModel
+  base_model_name: vit_base
+  setting: ${data.setting}
+  apply_fp_reweight: ${data.apply_fp_reweight}
+  img_size: ${data.img_size}
+  base_model_pretrain: true
+  fp_proj_type: FC
+  fp_hidden_dim: 512
+  fp_predictor_dropout: ~
+  fp_share_params: false
+  logit_norm_t: 0.01

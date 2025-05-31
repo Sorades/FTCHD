@@ -1,0 +1,20 @@
+job_type: subtype
+
+optimizer:
+  lr: 3e-5
+
+scheduler:
+  eta_min: 3e-6
+
+data:
+  setting: subtype
+  annotation_file: data/subtype_label.csv
+
+model:
+  _target_: ftchd.model.SubtypeModel
+  setting: ${data.setting}
+  img_size: ${data.img_size}
+  logit_norm_t: 0.01
+  enable_prior: true
+  cls_dim: 512
+  attn_type: cross_attn

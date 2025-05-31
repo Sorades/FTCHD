@@ -1,0 +1,80 @@
+seed: 42
+test: true
+
+data:
+  _target_: ftchd.data.CHDImageDataModule
+  setting: ~
+  annotation_file: ~
+  apply_cls_resample: false
+  apply_fp_reweight: false
+  root_dir: data
+  img_size: 224
+  mixed_img: false
+  batch_size: 64
+
+optimizer:
+  _target_: torch.optim.AdamW
+  lr: ~
+  weight_decay: 1e-4
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.CosineAnnealingWarmRestarts
+  T_0: 6
+  T_mult: 2
+  eta_min: ~
+
+trainer:
+  _target_: lightning.Trainer
+  devices: [7]
+  max_epochs: 100
+  min_epochs: 30
+  gradient_clip_val: 1.0
+  deterministic: false
+  log_every_n_steps: 1
+  default_root_dir: log
+
+wandb:
+  _target_: lightning.pytorch.loggers.WandbLogger
+  name: ~
+  save_dir: log/${job_type}
+  version: ~
+  project: chd
+  offline: false
+  log_model: false
+  resume: never
+  job_type: ${job_type}
+  group: ${data.setting}
+
+callbacks:
+  model_checkpoint:
+    _target_: lightning.pytorch.callbacks.ModelCheckpoint
+    monitor: Val/CLS/F1
+    mode: max
+
+  learning_rate_monitor:
+    _target_: lightning.pytorch.callbacks.LearningRateMonitor
+
+  early_stopping:
+    _target_: lightning.pytorch.callbacks.EarlyStopping
+    monitor: Loss/Val
+    mode: min
+    patience: 10
+    verbose: true
+
+  metric_cls:
+    _target_: ftchd.callbacks.cal_metric.CLSMetricCaculator
+
+  metric_fp:
+    _target_: ftchd.callbacks.cal_metric.FPMultilabelMetricCalculator
+
+  lr_warmup:
+    _target_: ftchd.callbacks.warmup.LRWarmup
+    warmup_steps: 100
+
+  heatmap_drawing:
+    _target_: ftchd.callbacks.draw_heatmaps.HeatmapDrawing
+    vis_type: ~     # ["cam_only", "cam_on_img", "all", ~]
+    heatmap_size: ${data.img_size}
+    heatmap_ratio: 0.4
+    file_ext: jpg
+    cam_prefix: cam
