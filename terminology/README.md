@@ -3,13 +3,6 @@
 The PLA General Hospital is a large, modern, comprehensive hospital that integrates medical care, health services, education, and research. It is directly under the Joint Logistics Support Force of the People's Liberation Army. The hospital serves as an important health care base for the Central Committee of the Communist Party of China and is also affiliated with the PLA Medical Academy, making it the only hospital in the military that operates an educational institution.
 
 ## Diagnosis Conclusion
-### Normal
-The definition of "Normal" is based on the predicted values of three key parameters of fetal cardiac diastolic flow patterns:
-- Chamber number: ≥ 2 (indicating at least two heart chambers are present, consistent with a normal four-chamber heart structure);
-- Flow number: = 2 (indicating two separate atrioventricular inflow tracts, with the left and right atria flowing into the left and right ventricles respectively);
-- Flow symmetry: Equal (indicating the inflow tracts are symmetric in flow).
-
-If all three parameters meet the above criteria according to the model prediction, the sample is classified as "Normal", meaning no significant congenital heart defect (CHD) abnormality is detected.
 
 ### HV
 During the first-trimester NT window (11–14 weeks; CRL 45–84 mm), a sustained, clinically significant asymmetry between right and left ventricles is observed on diastolic 4-chamber (4CV) color/power Doppler images in terms of diastolic filling, or flow perfusion pattern. This phenotype represents an early, non-specific morphologic sign of potential congenital cardiac abnormality and does not map to any single SNOMED CT malformation code.
