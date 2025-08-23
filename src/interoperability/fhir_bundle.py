@@ -42,6 +42,7 @@ HOSP_FULLNAME_MAPPING = {
     "TAHZU": "the Third Affiliated Hospital of Zhengzhou University",
     "XH": "Xiangya Hospital of Central South University",
 }
+LABEL_MAPPING = {"Abnormal": "473383000", "FSV": "443379009", "AVSD": "1237074000"}
 
 PREFIX = "ENC.-"
 
@@ -157,6 +158,8 @@ class UltrasoundDataConverter:
         )
 
     def create_diagnosis(self, label, image_id):
+        code = LABEL_MAPPING.get(label, None)
+        sys = SYS_SNOMED if code else SYS_FTCHD
         return DiagnosticReport(
             id=encode_id(f"report-{image_id}"),
             status="final",
@@ -180,7 +183,7 @@ class UltrasoundDataConverter:
             conclusion=label,
             conclusionCode=[
                 CodeableConcept(
-                    coding=[Coding(system=SYS_FTCHD, code=label, display=label)]
+                    coding=[Coding(system=sys, code=code or label, display=label)]
                 )
             ],
         )
