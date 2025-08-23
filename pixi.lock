@@ -367,10 +367,15 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zlib-1.3.1-hb9d3cd8_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstandard-0.23.0-py312h66e93f0_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb8e6e7a_2.conda
+      - pypi: https://files.pythonhosted.org/packages/6f/12/e5e0282d673bb9746bacfb6e2dba8719989d3660cdb2ea79aee9a9651afb/anyio-4.10.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a8/32/b8a1c8965e4f72482ff2d1ac2cd670ce0b542f203c8e1d34e7c3e6925da7/contourpy-1.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/e7/05/c19819d5e3d95294a6f5947fb9b9629efb316b96de511b418c53d245aae6/cycler-0.12.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c1/8b/5fe2cc11fee489817272089c4203e679c63b570a5aaeb18d852ae3cbba6a/et_xmlfile-2.0.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/e5/47/d63c60f59a59467fda0f93f46335c9d18526d7071f025cb5b89d5353ea42/fastapi-0.116.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/2b/16/0fb20a14046b6b8a447019e939e58ee8dbe54a6bd06472f93d9ec6801ed8/fhir_core-1.1.4-py2.py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/cc/a9/18672a8a1c570cb7b4eeafe1decd267f291997d20f240fffb17145a525f9/fhir_resources-8.1.0-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a6/13/0b96eeb148b77c521b8e94628c59d15e4fb0e76191c41f5616a656d6adb9/fonttools-4.58.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      - pypi: https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/bc/b3/9458adb9472e61a998c8c4d95cfdfec91c73c53a375b30b1428310f923e4/kiwisolver-1.4.8-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/42/d7/1ec15b46af6af88f19b8e5ffea08fa375d433c998b8a7639e76935c14f1f/markdown_it_py-3.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c4/91/ba0ae1ff4b3f30972ad01cd4a8029e70a0ec3b8ea5be04764b128b66f763/matplotlib-3.10.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
@@ -379,6 +384,9 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/8a/0b/9fcc47d19c48b59121088dd6da2488a49d5f72dacf8262e2790a1d2c7d15/pygments-2.19.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/05/e7/df2285f3d08fee213f2d041540fa4fc9ca6c2d44cf36d3a035bf2a8d2bcc/pyparsing-3.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/19/71/39c7c0d87f8d4e6c020a393182060eaefeeae6c01dab6a84ec346f2567df/rich-13.9.4-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/f7/1f/b876b1f83aef204198a42dc101613fefccb32258e5428b5f9259677864b4/starlette-0.47.2-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/d2/e2/dc81b1bd1dcfe91735810265e9d26bc8ec5da45b4c0f6237e286819194c3/uvicorn-0.35.0-py3-none-any.whl
       - pypi: ./
 packages:
 - conda: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-3_kmp_llvm.conda
@@ -505,6 +513,17 @@ packages:
   - pkg:pypi/antlr4-python3-runtime?source=hash-mapping
   size: 101065
   timestamp: 1638309284042
+- pypi: https://files.pythonhosted.org/packages/6f/12/e5e0282d673bb9746bacfb6e2dba8719989d3660cdb2ea79aee9a9651afb/anyio-4.10.0-py3-none-any.whl
+  name: anyio
+  version: 4.10.0
+  sha256: 60e474ac86736bbfd6f210f7a61218939c318f43f9972497381f1c5e930ed3d1
+  requires_dist:
+  - exceptiongroup>=1.0.2 ; python_full_version < '3.11'
+  - idna>=2.8
+  - sniffio>=1.1
+  - typing-extensions>=4.5 ; python_full_version < '3.13'
+  - trio>=0.26.1 ; extra == 'trio'
+  requires_python: '>=3.9'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/aom-3.9.1-hac33072_0.conda
   sha256: b08ef033817b5f9f76ce62dfcac7694e7b6b4006420372de22494503decac855
   md5: 346722a0be40f6edc53f12640d301338
@@ -1274,6 +1293,39 @@ packages:
   purls: []
   size: 140050
   timestamp: 1743431809745
+- pypi: https://files.pythonhosted.org/packages/e5/47/d63c60f59a59467fda0f93f46335c9d18526d7071f025cb5b89d5353ea42/fastapi-0.116.1-py3-none-any.whl
+  name: fastapi
+  version: 0.116.1
+  sha256: c46ac7c312df840f0c9e220f7964bada936781bc4e2e6eb71f1c4d7553786565
+  requires_dist:
+  - starlette>=0.40.0,<0.48.0
+  - pydantic>=1.7.4,!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0
+  - typing-extensions>=4.8.0
+  - fastapi-cli[standard]>=0.0.8 ; extra == 'standard'
+  - httpx>=0.23.0 ; extra == 'standard'
+  - jinja2>=3.1.5 ; extra == 'standard'
+  - python-multipart>=0.0.18 ; extra == 'standard'
+  - email-validator>=2.0.0 ; extra == 'standard'
+  - uvicorn[standard]>=0.12.0 ; extra == 'standard'
+  - fastapi-cli[standard-no-fastapi-cloud-cli]>=0.0.8 ; extra == 'standard-no-fastapi-cloud-cli'
+  - httpx>=0.23.0 ; extra == 'standard-no-fastapi-cloud-cli'
+  - jinja2>=3.1.5 ; extra == 'standard-no-fastapi-cloud-cli'
+  - python-multipart>=0.0.18 ; extra == 'standard-no-fastapi-cloud-cli'
+  - email-validator>=2.0.0 ; extra == 'standard-no-fastapi-cloud-cli'
+  - uvicorn[standard]>=0.12.0 ; extra == 'standard-no-fastapi-cloud-cli'
+  - fastapi-cli[standard]>=0.0.8 ; extra == 'all'
+  - httpx>=0.23.0 ; extra == 'all'
+  - jinja2>=3.1.5 ; extra == 'all'
+  - python-multipart>=0.0.18 ; extra == 'all'
+  - itsdangerous>=1.1.0 ; extra == 'all'
+  - pyyaml>=5.3.1 ; extra == 'all'
+  - ujson>=4.0.1,!=4.0.2,!=4.1.0,!=4.2.0,!=4.3.0,!=5.0.0,!=5.1.0 ; extra == 'all'
+  - orjson>=3.2.1 ; extra == 'all'
+  - email-validator>=2.0.0 ; extra == 'all'
+  - uvicorn[standard]>=0.12.0 ; extra == 'all'
+  - pydantic-settings>=2.0.0 ; extra == 'all'
+  - pydantic-extra-types>=2.0.0 ; extra == 'all'
+  requires_python: '>=3.8'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/ffmpeg-7.1.1-gpl_h127656b_905.conda
   sha256: 66d08d77c7a8329797e4e060018078365fc982905f10d4cfb8d0212dfd9aac30
   md5: 2267aef4540c21acb908cb9b4a72a5dd
@@ -1332,6 +1384,106 @@ packages:
   purls: []
   size: 10387419
   timestamp: 1746480490222
+- pypi: https://files.pythonhosted.org/packages/2b/16/0fb20a14046b6b8a447019e939e58ee8dbe54a6bd06472f93d9ec6801ed8/fhir_core-1.1.4-py2.py3-none-any.whl
+  name: fhir-core
+  version: 1.1.4
+  sha256: 66d81639f9a45e646cf21cae492d68d89550a22409bf68a9b292b789e0d0061d
+  requires_dist:
+  - pydantic>=2.7.4,<3.0
+  - coverage ; extra == 'test'
+  - pytest>5.4.0 ; python_full_version >= '3.6' and extra == 'test'
+  - pytest-cov>=2.10.0 ; python_full_version >= '3.6' and extra == 'test'
+  - flake8==6.0 ; extra == 'test'
+  - flake8-isort>=6.0.0 ; extra == 'test'
+  - flake8-bugbear>=22.12.6 ; extra == 'test'
+  - requests==2.23.0 ; python_full_version < '3.10' and extra == 'test'
+  - isort>=5.11.4 ; extra == 'test'
+  - black>=23.0,<24.0 ; python_full_version >= '3.7' and extra == 'test'
+  - mypy ; extra == 'test'
+  - pyyaml>=6.0.1 ; extra == 'test'
+  - types-pyyaml ; extra == 'test'
+  - types-simplejson ; extra == 'test'
+  - types-requests ; extra == 'test'
+  - setuptools==65.6.3 ; python_full_version >= '3.7' and extra == 'test'
+  - lxml ; extra == 'test'
+  - importlib-metadata>=5.2.0 ; extra == 'test'
+  - pytest-runner ; extra == 'test'
+  - coverage ; extra == 'dev'
+  - pytest>5.4.0 ; python_full_version >= '3.6' and extra == 'dev'
+  - pytest-cov>=2.10.0 ; python_full_version >= '3.6' and extra == 'dev'
+  - flake8==6.0 ; extra == 'dev'
+  - flake8-isort>=6.0.0 ; extra == 'dev'
+  - flake8-bugbear>=22.12.6 ; extra == 'dev'
+  - requests==2.23.0 ; python_full_version < '3.10' and extra == 'dev'
+  - isort>=5.11.4 ; extra == 'dev'
+  - black>=23.0,<24.0 ; python_full_version >= '3.7' and extra == 'dev'
+  - mypy ; extra == 'dev'
+  - pyyaml>=6.0.1 ; extra == 'dev'
+  - types-pyyaml ; extra == 'dev'
+  - types-simplejson ; extra == 'dev'
+  - types-requests ; extra == 'dev'
+  - setuptools==65.6.3 ; python_full_version >= '3.7' and extra == 'dev'
+  - lxml ; extra == 'dev'
+  - importlib-metadata>=5.2.0 ; extra == 'dev'
+  - jinja2==2.11.1 ; extra == 'dev'
+  - markupsafe==1.1.1 ; extra == 'dev'
+  - colorlog==2.10.0 ; extra == 'dev'
+  - certifi ; extra == 'dev'
+  - fhirspec ; extra == 'dev'
+  - zest-releaser[recommended] ; extra == 'dev'
+  requires_python: '>=3.8'
+- pypi: https://files.pythonhosted.org/packages/cc/a9/18672a8a1c570cb7b4eeafe1decd267f291997d20f240fffb17145a525f9/fhir_resources-8.1.0-py2.py3-none-any.whl
+  name: fhir-resources
+  version: 8.1.0
+  sha256: 4370a5b6b35f278705328368bf79b3a17db91025fd4ec896fb963edd44ecc5de
+  requires_dist:
+  - fhir-core>=1.1.3
+  - pyyaml>=5.4.1 ; extra == 'yaml'
+  - lxml ; extra == 'xml'
+  - coverage ; extra == 'test'
+  - pytest>5.4.0 ; python_full_version >= '3.6' and extra == 'test'
+  - pytest-cov>=2.10.0 ; python_full_version >= '3.6' and extra == 'test'
+  - flake8==6.0 ; extra == 'test'
+  - flake8-isort>=6.0.0 ; extra == 'test'
+  - flake8-bugbear>=22.12.6 ; extra == 'test'
+  - requests==2.23.0 ; python_full_version < '3.10' and extra == 'test'
+  - isort>=5.11.4 ; extra == 'test'
+  - black>=23.0,<24.0 ; python_full_version >= '3.7' and extra == 'test'
+  - mypy ; extra == 'test'
+  - types-pyyaml ; extra == 'test'
+  - types-simplejson ; extra == 'test'
+  - types-requests ; extra == 'test'
+  - setuptools==65.6.3 ; python_full_version >= '3.7' and extra == 'test'
+  - importlib-metadata>=5.2.0 ; extra == 'test'
+  - typed-ast>=1.5.4 ; extra == 'test'
+  - pytest-runner ; extra == 'test'
+  - pyyaml>=5.4.1 ; extra == 'test'
+  - lxml ; extra == 'test'
+  - coverage ; extra == 'dev'
+  - pytest>5.4.0 ; python_full_version >= '3.6' and extra == 'dev'
+  - pytest-cov>=2.10.0 ; python_full_version >= '3.6' and extra == 'dev'
+  - flake8==6.0 ; extra == 'dev'
+  - flake8-isort>=6.0.0 ; extra == 'dev'
+  - flake8-bugbear>=22.12.6 ; extra == 'dev'
+  - requests==2.23.0 ; python_full_version < '3.10' and extra == 'dev'
+  - isort>=5.11.4 ; extra == 'dev'
+  - black>=23.0,<24.0 ; python_full_version >= '3.7' and extra == 'dev'
+  - mypy ; extra == 'dev'
+  - types-pyyaml ; extra == 'dev'
+  - types-simplejson ; extra == 'dev'
+  - types-requests ; extra == 'dev'
+  - setuptools==65.6.3 ; python_full_version >= '3.7' and extra == 'dev'
+  - importlib-metadata>=5.2.0 ; extra == 'dev'
+  - typed-ast>=1.5.4 ; extra == 'dev'
+  - jinja2==3.1.6 ; extra == 'dev'
+  - markupsafe==2.1.5 ; extra == 'dev'
+  - colorlog==2.10.0 ; extra == 'dev'
+  - certifi ; extra == 'dev'
+  - fhirspec>=0.6.0 ; extra == 'dev'
+  - zest-releaser[recommended] ; extra == 'dev'
+  - pyyaml>=5.4.1 ; extra == 'all'
+  - lxml ; extra == 'all'
+  requires_python: '>=3.8'
 - conda: https://conda.anaconda.org/conda-forge/noarch/filelock-3.18.0-pyhd8ed1ab_0.conda
   sha256: de7b6d4c4f865609ae88db6fa03c8b7544c2452a1aa5451eb7700aad16824570
   md5: 4547b39256e296bb758166893e909a7c
@@ -1512,11 +1664,14 @@ packages:
 - pypi: ./
   name: ftchd
   version: 0.1.0
-  sha256: 0e2d62b0bd1d328c890e0d17d375d268319a598291f3192587b5d6755c790ca5
+  sha256: 4b9c6d66ef7f8784c063f8bdb56acd9033d51a164ae75d47f5fe1aaba5292239
   requires_dist:
   - rich>=13.9.4,<14
   - matplotlib>=3.9.2,<4
   - openpyxl>=3.1.5,<4
+  - fhir-resources>=8.1.0,<9
+  - fastapi>=0.116.1,<0.117
+  - uvicorn>=0.35.0,<0.36
   requires_python: '>=3.11'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/linux-64/gdk-pixbuf-2.42.12-hb9ae30d_0.conda
@@ -1647,6 +1802,11 @@ packages:
   purls: []
   size: 96855
   timestamp: 1711634169756
+- pypi: https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl
+  name: h11
+  version: 0.16.0
+  sha256: 63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86
+  requires_python: '>=3.8'
 - conda: https://conda.anaconda.org/conda-forge/noarch/h2-4.2.0-pyhd8ed1ab_0.conda
   sha256: 0aa1cdc67a9fe75ea95b5644b734a756200d6ec9d0dff66530aec3d1c1e9df75
   md5: b4754fb1bdcb70c8fd54f918301582c6
@@ -4850,6 +5010,24 @@ packages:
   purls: []
   size: 42739
   timestamp: 1733501881851
+- pypi: https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl
+  name: sniffio
+  version: 1.3.1
+  sha256: 2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2
+  requires_python: '>=3.7'
+- pypi: https://files.pythonhosted.org/packages/f7/1f/b876b1f83aef204198a42dc101613fefccb32258e5428b5f9259677864b4/starlette-0.47.2-py3-none-any.whl
+  name: starlette
+  version: 0.47.2
+  sha256: c5847e96134e5c5371ee9fac6fdf1a67336d5815e09eb2a01fdb57a351ef915b
+  requires_dist:
+  - anyio>=3.6.2,<5
+  - typing-extensions>=4.10.0 ; python_full_version < '3.13'
+  - httpx>=0.27.0,<0.29.0 ; extra == 'full'
+  - itsdangerous ; extra == 'full'
+  - jinja2 ; extra == 'full'
+  - python-multipart>=0.0.18 ; extra == 'full'
+  - pyyaml ; extra == 'full'
+  requires_python: '>=3.9'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/stringzilla-3.12.5-py312h66e93f0_0.conda
   sha256: 4e1ecf67f084953e7ccc72f6a605ab094f732c933812d047dc424b91e2023b3c
   md5: 5556f25a6da1f6002cf57f999d505a20
@@ -5085,6 +5263,22 @@ packages:
   - pkg:pypi/urllib3?source=hash-mapping
   size: 100791
   timestamp: 1744323705540
+- pypi: https://files.pythonhosted.org/packages/d2/e2/dc81b1bd1dcfe91735810265e9d26bc8ec5da45b4c0f6237e286819194c3/uvicorn-0.35.0-py3-none-any.whl
+  name: uvicorn
+  version: 0.35.0
+  sha256: 197535216b25ff9b785e29a0b79199f55222193d47f820816e7da751e9bc8d4a
+  requires_dist:
+  - click>=7.0
+  - h11>=0.8
+  - typing-extensions>=4.0 ; python_full_version < '3.11'
+  - colorama>=0.4 ; sys_platform == 'win32' and extra == 'standard'
+  - httptools>=0.6.3 ; extra == 'standard'
+  - python-dotenv>=0.13 ; extra == 'standard'
+  - pyyaml>=5.1 ; extra == 'standard'
+  - uvloop>=0.15.1 ; platform_python_implementation != 'PyPy' and sys_platform != 'cygwin' and sys_platform != 'win32' and extra == 'standard'
+  - watchfiles>=0.13 ; extra == 'standard'
+  - websockets>=10.4 ; extra == 'standard'
+  requires_python: '>=3.9'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/wandb-0.19.11-py312h7545c40_0.conda
   sha256: 34a2a7c1012a552ae89042fa2bc1a00a8d6cdd86fa9514ea70b55ceec4b757e3
   md5: f3ca0e2bab1df90f0cb456cea802b562

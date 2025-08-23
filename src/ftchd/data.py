@@ -271,7 +271,6 @@ class CHDImageDataset(Dataset):
         item = self.annotation.iloc[idx]
         item_id = item["ID"]
         case_id = item["CaseID"]
-        domain_name = item["Domain"]
         target = self.cls_name.index(item["Label"])
         if self.task == Task.BINARY:
             target = torch.FloatTensor([target])
@@ -285,8 +284,8 @@ class CHDImageDataset(Dataset):
             concept.append(fp_idx)
         concept = torch.FloatTensor(concept)
 
-        img_path = os.path.join(self.root_dir, domain_name, "images", f"{item_id}.png")
-        mask_path = os.path.join(self.root_dir, domain_name, "masks", f"{item_id}.png")
+        img_path = os.path.join(self.root_dir, "images", f"{item_id}.png")
+        mask_path = os.path.join(self.root_dir, "masks", f"{item_id}.png")
 
         bgr_img = cv2.imread(img_path, cv2.IMREAD_COLOR)
         img = cv2.cvtColor(bgr_img, cv2.COLOR_BGR2RGB)

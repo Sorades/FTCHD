@@ -1,9 +1,12 @@
 [project]
-authors = [{name = "Sorades", email = "2019302080119@whu.edu.cn"}]
+authors = [{ name = "Chi Wen", email = "wenchi@whu.edu.cn" }]
 dependencies = [
     "rich>=13.9.4,<14",
     "matplotlib>=3.9.2,<4",
     "openpyxl>=3.1.5,<4",
+    "fhir-resources>=8.1.0,<9",
+    "fastapi>=0.116.1,<0.117",
+    "uvicorn>=0.35.0,<0.36",
 ]
 name = "FTCHD"
 description = "Codebase for `An interpretable deep learning model for first-trimester fetal cardiac screening`"
@@ -20,9 +23,6 @@ platforms = ["linux-64"]
 
 [tool.pixi.pypi-dependencies]
 ftchd = { path = ".", editable = true }
-
-[tool.pixi.activation.env]
-NO_ALBUMENTATIONS_UPDATE = '1'
 
 [tool.pixi.dependencies]
 python = "3.12.4.*"

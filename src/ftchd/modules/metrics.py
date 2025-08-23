@@ -127,6 +127,9 @@ class CHDMetricCLSMulticlass(Metric):
                 "AUC": AUROC(
                     task="multiclass", num_classes=num_cls, average="none", **kwargs
                 ),
+                "CLS/F1": F1Score(
+                    task="multiclass", num_classes=num_cls, average="macro", **kwargs
+                ),
             }
         )
 
@@ -135,12 +138,14 @@ class CHDMetricCLSMulticlass(Metric):
 
     def compute(self):
         metric_out = self.metric.compute()
+        cls_f1 = metric_out.pop("CLS/F1")
 
         ret = {
             f"{self.stage}/{self.name_cls[idx]}/{key}": v
             for key, value in metric_out.items()
             for idx, v in enumerate(value)
         }
+        ret[f"{self.stage}/CLS/F1"] = cls_f1
         return ret
 
     def reset(self):
