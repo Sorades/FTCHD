@@ -17,6 +17,3 @@ See `pyproject.toml` for more details. If you are using pixi, simply run:
 ```bash
 pixi i && pixi shell
 ```
-
-## TODO
-- [ ] public model weights and data
