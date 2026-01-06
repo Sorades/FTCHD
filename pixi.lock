@@ -1664,7 +1664,7 @@ packages:
 - pypi: ./
   name: ftchd
   version: 0.1.0
-  sha256: 4b9c6d66ef7f8784c063f8bdb56acd9033d51a164ae75d47f5fe1aaba5292239
+  sha256: fe6ce3f73cccc09ec4d3c6c58b9c23e9d417a912a046d1afa9d267985696d0da
   requires_dist:
   - rich>=13.9.4,<14
   - matplotlib>=3.9.2,<4

@@ -1,0 +1,26 @@
+name: ftchd
+channels:
+- nvidia
+- conda-forge
+- pytorch
+- nodefaults
+dependencies:
+- albumentations >=1.4.15,<2
+- lightning >=2.4.0,<3
+- opencv >=4.10.0,<5
+- pandas >=2.2.3,<3
+- python 3.12.4.*
+- pytorch::pytorch 2.4.0.*
+- pytorch::torchvision >=0.19.0,<0.20
+- transformers >=4.45.2,<5
+- wandb >=0.19.1,<0.20
+- omegaconf >=2.3.0,<3
+- pip
+- pip:
+  - -e .
+  - matplotlib>=3.9.2, <4
+  - openpyxl>=3.1.5, <4
+  - rich>=13.9.4, <14
+  - fhir-resources>=8.1.0, <9
+  - fastapi>=0.116.1,<0.117
+  - uvicorn>=0.35.0,<0.36
