@@ -1,6 +1,7 @@
-# FTCHD
-
-## An interpretable deep learning model for first-trimester fetal cardiac screening
+# An interpretable deep learning model for first-trimester fetal cardiac screening
+[![License](https://img.shields.io/github/license/Sorades/FTCHD)](https://github.com/Sorades/FTCHD/blob/main/LICENSE)
+[![npj Digital Medicine](https://img.shields.io/badge/npj-Digital%20Medicine-d9252c)](https://www.nature.com/articles/s41746-025-02217-6)
+[![DOI](https://img.shields.io/badge/DOI-10.1038%2Fs41746--025--02217--6-blue)](https://doi.org/10.1038/s41746-025-02217-6)
 ![Study Overview](assets/study_overview.png)
 
 Effective first-trimester screening for congenital heart disease (CHD) remains an unmet clinical need, hampered by technical limitations and the absence of validated diagnostic tools. To address this, we collected a vast cohort of 108,521 first-trimester cardiac screenings conducted across multiple regions in China, from which 8,062 Doppler flow four-chamber view images were selected. Using this curated dataset, we developed and validated an interpretable deep learning (DL) model that mimics clinical reasoning with diastolic flow patterns, providing accurate and explainable CHD diagnosis in first-trimester. Interpretability analyses confirmed its diagnostic logic strongly aligns with clinical expertise. In rigorous evaluations, the model demonstrated high accuracy across multiple external validation datasets, matched or surpassed experienced clinicians, and showed potential to augment their diagnostic capabilities. To our knowledge, this is the first validated interpretable DL system for first-trimester CHD screening, potentially enabling earlier intervention through an advanced diagnostic window.
@@ -17,11 +18,13 @@ See `pyproject.toml` for more details. If you are using [pixi](https://github.co
 ```bash
 pixi i && pixi shell
 ```
+
 We also provide a conda environment file `environment.yaml` for easy setup:
 ```bash
 conda env create -f environment.yaml
 conda activate ftchd
 ```
+
 ## Training & Evaluation
 ```bash
 # For binary classification
@@ -35,7 +38,7 @@ The researchers who apply to access the data should provide a methodologically s
 
 ## Citation
 If you find this work useful for your research, please kindly cite our paper:
-```
+```bib
 @article{lei2025interpretable,
   title={An interpretable deep learning model for first-trimester fetal cardiac screening},
   author={Lei, Wenjia and Wen, Chi and Li, He and Yang, Shuihua and Shen, Kuifang and Yuan, Hongxia and Li, Hezhou and Xu, Hong and Gao, Xinru and Zhang, Simin and others},
